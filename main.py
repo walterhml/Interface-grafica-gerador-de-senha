@@ -1,14 +1,13 @@
 import PySimpleGUI as sg
+import random
 
-# All the stuff inside your window.
-layout = [  [sg.Text('Some text on Row 1')],
-            [sg.Text('Enter something on Row 2'), sg.InputText()],
-            [sg.Button('Ok'), sg.Button('Cancel')] ]
+layout = [  [sg.Text('primary inteface grafica!') ],
+            [sg.Text('veja um input: '), sg.InputText()],
+            [sg.Button('ok'), sg.Button('Cancel')] ]
 
-# Create the Window
-window = sg.Window('Window Title', layout)
+window = sg.Window('Gerenciador de Tarefas', layout)
 
-# Event Loop to process "events" and get the "values" of the inputs
+
 while True:
     event, values = window.read()
     if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
